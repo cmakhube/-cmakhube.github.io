@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with - Clinton_movement</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Contact Us</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="text-box">
+                <h3 class="title"> Featured Products</h3>
+                <h1><b>Say no more</b> the work <b>speaks for its</b> self</h1>
+
+            </div>
+            <img src="images/circle.png" class="small-icon1">
+            <img src="images/circle.png" class="small-icon2">
+            <img src="images/square.png" class="small-icon3">
+        </div>
+        <div class="col">
+            <div class="gallery-box">
+                <img src="images/pic1.jpg" id="gallery">
+                <ul>
+                    <li class="btn">01</li>
+                    <li class="btn active">02</li>
+                    <li class="btn">03</li>
+                    <li class="btn">04</li>
+                </ul>
+            </div>
+        </div>
+        <img src="images/circle.png" class="small-icon4">
+        <img src="images/square.png" class="small-icon5">
+
+    </div>
+<div class="footer">
+    <div class="row-1">
+        <div class="footer-col-1">
+            <h3>Download our App</h3>
+            <p>Download for Andrid or IOS</p>
+            <div class="app-logo">
+            <img src="images/APPLE2.png">
+            <img src="images/GOOGLE2.png">
+            </div>
+        </div>
+        
+        <div class="footer-col-2">
+            
+            <p class= "copyright">Copyright 2021 - Clinton_Movement</p>				
+        </div> 
+    </div>
+</div>
+<script>
+    var btn = document.getElementsByClassName("btn");
+    var gallery = document.getElementById("gallery");
+
+    var images = new Array
+    (
+    "images/pic1.png",
+    "images/pic2.jpg",
+    "images/pic3.jpg",
+    "images/pic4.png"
+    );
+    
+    for(let i=0; i<btn.length; i++){
+        btn[i].onclick = function()
+        {
+            gallery.src = images[i];
+        };
+    } 
+
+    var menuList = document.getElementById("menuList");
+    
+    menuList.style.maxHeight = "0px";
+    
+    function togglemenu(){
+
+        if(menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "130px";
+        }
+        else
+        {
+            menuList.style.maxHeight = "0px";
+        }
+    }
+        
+</script>
+</body>
+</html>
